@@ -12,11 +12,15 @@ public:
 public slots:
     void numEntered(int);
 
+    void negate();
     void clear();
     void allClear();
 
     void additionMode();
     void subtractionMode();
+
+    void multiplicationMode();
+    void divisionMode();
 
     void calculate();
 
@@ -27,6 +31,7 @@ private:
     int m_lastResult;
     int m_currentNumber;
     bool m_isAdding;
+    bool m_isMultiplicating;
 };
 
 #endif // CALCULATOR_H

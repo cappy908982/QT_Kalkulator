@@ -38,9 +38,12 @@ CalculatorInterface::CalculatorInterface(QWidget *parent) :
     connect(m_calculator, SIGNAL(displayChanged(QString)), ui->entryLabel, SLOT(setText(QString)));
     connect(ui->buttonAllClear, SIGNAL(clicked()), m_calculator, SLOT(allClear()));
     connect(ui->buttonAdd, SIGNAL(clicked()), m_calculator, SLOT(additionMode()));
+    connect(ui->buttonMulti, SIGNAL(clicked()), m_calculator, SLOT(multiplicationMode()));
+    connect(ui->buttonDivide, SIGNAL(clicked()), m_calculator, SLOT(divisionMode()));
     connect(ui->buttonSubtract, SIGNAL(clicked()), m_calculator, SLOT(subtractionMode()));
     connect(ui->buttonCalculate, SIGNAL(clicked()), m_calculator, SLOT(calculate()));
     connect(ui->buttonClear, SIGNAL(clicked()), m_calculator, SLOT(clear()));
+    connect(ui->negativeNumber, SIGNAL(clicked()), m_calculator, SLOT(negate()));
 
      m_calculator->allClear();
 }
